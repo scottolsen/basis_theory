@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.basistheory.com/atomic/banks
+    body:
+      encoding: UTF-8
+      string: '{"bank":{"routing_number":"021000021","account_number":"1234567890"}}'
+    headers:
+      X-Api-Key:
+      - "<NO SOUP FOR YOU>"
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Length:
+      - '279'
+      Content-Type:
+      - application/json; charset=utf-8
+      Location:
+      - https://api.basistheory.com/atomic/banks/b4e9c732-74dc-46a2-a75a-964b2940617c
+      Request-Context:
+      - appId=cid-v1:cdb7d2c6-2cbb-43ab-a23f-e8853a5afc9b
+      Bt-Trace-Id:
+      - 449c82a5-a6fb-4a76-8c15-5f5902bfdb75
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'self'
+      X-Cache:
+      - CONFIG_NOCACHE
+      X-Azure-Ref:
+      - 0CVZOYQAAAACGqMeLwi2zQ5yUxH19Ml/8Q0hHRURHRTE2MTQAMmM1Nzk0NDgtNjA3MC00MjgyLWIzYWMtZGE3MGQ0NmIxYzQ3
+      Date:
+      - Fri, 24 Sep 2021 22:49:44 GMT
+    body:
+      encoding: UTF-8
+      string: '{"id":"b4e9c732-74dc-46a2-a75a-964b2940617c","tenant_id":"<NO SOUP
+        FOR YOU>","bank":{"routing_number":"021000021","account_number":"XXXXXX7890"},"type":"bank","created_by":"b12c1d3f-76ee-4808-8624-e331a3948d1e","created_at":"2021-09-24T22:49:45.6655304+00:00"}'
+  recorded_at: Fri, 24 Sep 2021 22:49:45 GMT
+recorded_with: VCR 6.0.0

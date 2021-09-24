@@ -1,6 +1,11 @@
 # frozen_string_literal: true
 
 require 'basis_theory'
+require 'debug'
+require 'dotenv/load'
+require 'json'
+
+Dir[File.join(File.dirname(__FILE__), 'support', '**/*.rb')].sort.each { |f| require f }
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

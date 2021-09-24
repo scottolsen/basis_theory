@@ -1,8 +1,19 @@
 # frozen_string_literal: true
 
-require_relative 'basis_theory/version'
+require 'faraday'
+require 'faraday_middleware'
+require 'basis_theory/version'
 
 module BasisTheory
-  class Error < StandardError; end
-  # Your code goes here...
+  autoload :Client, 'basis_theory/client'
+  autoload :Collection, 'basis_theory/collection'
+  autoload :Error, 'basis_theory/error'
+  autoload :Resource, 'basis_theory/resource'
+  autoload :Object, 'basis_theory/object'
+
+  autoload :ApplicationResource, 'basis_theory/resources/application_resource'
+  autoload :AtomicBankResource, 'basis_theory/resources/atomic_bank_resource'
+
+  autoload :Application, 'basis_theory/objects/application'
+  autoload :AtomicBank, 'basis_theory/objects/atomic_bank'
 end
