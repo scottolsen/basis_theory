@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description   = 'Ruby gem for the Basis Theory API. API docs can be found here: https://docs.basistheory.com/api-reference/#introduction'
   spec.homepage      = 'https://github.com/scottolsen/basis_theory'
   spec.license       = 'MIT'
-  spec.required_ruby_version = '>= 2.5.0'
+  spec.required_ruby_version = '>= 2.6.0'
 
   spec.metadata['allowed_push_host'] = "TODO: Set to 'https://mygemserver.com'"
 
