@@ -18,8 +18,8 @@ RSpec.describe BasisTheory::AtomicBankResource do
       VCR.use_cassette('atom_bank_create') do
         client = BasisTheory::Client.new(api_key: ENV['API_KEY'])
 
-        attributes = { bank: { routing_number: '021000021', account_number: '1234567890' } }
-        bank = client.atomic_bank.create(attributes)
+        attributes = { routing_number: '021000021', account_number: '1234567890' }
+        bank = client.atomic_bank.create(bank: attributes)
 
         expect(bank.class).to eq(BasisTheory::AtomicBank)
       end
