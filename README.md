@@ -22,8 +22,39 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Grab an API Key from an Application you created.
 
+```ruby
+client = BasisTheory::Client.new(api_key: 'YOUR_API_KEY')
+```
+
+### Atomic Banks
+
+#### Create an Atomic Bank
+
+```ruby
+atomic_bank = client.atomic_bank.create(
+  bank: {
+    routing_number: '021000021',
+    account_number: '1234567890'
+  }
+)
+
+atomic_bank.type # => 'bank'
+atomic_bank.bank.routing_number # => '021000021'
+```
+
+#### List Atomic Banks
+
+```ruby
+atomic_banks = client.atomic_bank.list # => BasisTheory::Collection
+
+atomic_bank = atomic_banks.first # => BasisTheory::AtomicBank
+
+atomic_bank.type # => 'bank'
+atomic_bank.bank.routing_number # => '021000021'
+```
+    
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
