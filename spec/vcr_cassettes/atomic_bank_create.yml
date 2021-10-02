@@ -27,11 +27,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Location:
-      - https://api.basistheory.com/atomic/banks/b4e9c732-74dc-46a2-a75a-964b2940617c
+      - https://api.basistheory.com/atomic/banks/a833bfa7-7a3c-4fe3-a9b7-e89fc0bf26a9
       Request-Context:
       - appId=cid-v1:cdb7d2c6-2cbb-43ab-a23f-e8853a5afc9b
       Bt-Trace-Id:
-      - 449c82a5-a6fb-4a76-8c15-5f5902bfdb75
+      - 69998ef3-826c-4c26-9696-e61ef8893a8f
       X-Xss-Protection:
       - 1; mode=block
       X-Content-Type-Options:
@@ -41,12 +41,12 @@ http_interactions:
       X-Cache:
       - CONFIG_NOCACHE
       X-Azure-Ref:
-      - 0CVZOYQAAAACGqMeLwi2zQ5yUxH19Ml/8Q0hHRURHRTE2MTQAMmM1Nzk0NDgtNjA3MC00MjgyLWIzYWMtZGE3MGQ0NmIxYzQ3
+      - 000JYYQAAAAAEgAOn3F4MSK4zWmFmwDITQ0hHRURHRTE2MTYAMmM1Nzk0NDgtNjA3MC00MjgyLWIzYWMtZGE3MGQ0NmIxYzQ3
       Date:
-      - Fri, 24 Sep 2021 22:49:44 GMT
+      - Sat, 02 Oct 2021 11:30:27 GMT
     body:
       encoding: UTF-8
-      string: '{"id":"b4e9c732-74dc-46a2-a75a-964b2940617c","tenant_id":"<NO SOUP
-        FOR YOU>","bank":{"routing_number":"021000021","account_number":"XXXXXX7890"},"type":"bank","created_by":"b12c1d3f-76ee-4808-8624-e331a3948d1e","created_at":"2021-09-24T22:49:45.6655304+00:00"}'
-  recorded_at: Fri, 24 Sep 2021 22:49:45 GMT
+      string: '{"id":"a833bfa7-7a3c-4fe3-a9b7-e89fc0bf26a9","tenant_id":"<NO SOUP
+        FOR YOU>","bank":{"routing_number":"021000021","account_number":"XXXXXX7890"},"type":"bank","created_by":"b12c1d3f-76ee-4808-8624-e331a3948d1e","created_at":"2021-10-02T11:30:27.4107954+00:00"}'
+  recorded_at: Sat, 02 Oct 2021 11:30:27 GMT
 recorded_with: VCR 6.0.0

@@ -1,0 +1,99 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.basistheory.com/atomic/banks
+    body:
+      encoding: UTF-8
+      string: '{"bank":{"routing_number":"021000021","account_number":"1234567890"}}'
+    headers:
+      X-Api-Key:
+      - "<NO SOUP FOR YOU>"
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Length:
+      - '279'
+      Content-Type:
+      - application/json; charset=utf-8
+      Location:
+      - https://api.basistheory.com/atomic/banks/48b956e8-f782-4ac5-80ef-e9ee6ec52ea7
+      Request-Context:
+      - appId=cid-v1:cdb7d2c6-2cbb-43ab-a23f-e8853a5afc9b
+      Bt-Trace-Id:
+      - 141b9778-b076-4e43-aedc-5116fc55ebfd
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'self'
+      X-Cache:
+      - CONFIG_NOCACHE
+      X-Azure-Ref:
+      - 0z0JYYQAAAAD6SuUUxm84TZhMYXEq7SWUQ0hHRURHRTE2MTQAMmM1Nzk0NDgtNjA3MC00MjgyLWIzYWMtZGE3MGQ0NmIxYzQ3
+      Date:
+      - Sat, 02 Oct 2021 11:30:23 GMT
+    body:
+      encoding: UTF-8
+      string: '{"id":"48b956e8-f782-4ac5-80ef-e9ee6ec52ea7","tenant_id":"<NO SOUP
+        FOR YOU>","bank":{"routing_number":"021000021","account_number":"XXXXXX7890"},"type":"bank","created_by":"b12c1d3f-76ee-4808-8624-e331a3948d1e","created_at":"2021-10-02T11:30:23.6630188+00:00"}'
+  recorded_at: Sat, 02 Oct 2021 11:30:23 GMT
+- request:
+    method: get
+    uri: https://api.basistheory.com/atomic/banks/48b956e8-f782-4ac5-80ef-e9ee6ec52ea7
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Api-Key:
+      - "<NO SOUP FOR YOU>"
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '279'
+      Content-Type:
+      - application/json; charset=utf-8
+      Request-Context:
+      - appId=cid-v1:cdb7d2c6-2cbb-43ab-a23f-e8853a5afc9b
+      Bt-Trace-Id:
+      - a238a703-f4cc-4d53-bfb5-51765d2dec36
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'self'
+      X-Cache:
+      - CONFIG_NOCACHE
+      X-Azure-Ref:
+      - 0z0JYYQAAAADLPo1DcZtcRKz6S1rjle7HQ0hHRURHRTE2MTIAMmM1Nzk0NDgtNjA3MC00MjgyLWIzYWMtZGE3MGQ0NmIxYzQ3
+      Date:
+      - Sat, 02 Oct 2021 11:30:23 GMT
+    body:
+      encoding: UTF-8
+      string: '{"id":"48b956e8-f782-4ac5-80ef-e9ee6ec52ea7","tenant_id":"<NO SOUP
+        FOR YOU>","bank":{"routing_number":"021000021","account_number":"XXXXXX7890"},"type":"bank","created_by":"b12c1d3f-76ee-4808-8624-e331a3948d1e","created_at":"2021-10-02T11:30:23.6630188+00:00"}'
+  recorded_at: Sat, 02 Oct 2021 11:30:24 GMT
+recorded_with: VCR 6.0.0

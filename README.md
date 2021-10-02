@@ -30,6 +30,17 @@ client = BasisTheory::Client.new(api_key: 'YOUR_API_KEY')
 
 ### Atomic Banks
 
+#### List Atomic Banks
+
+```ruby
+atomic_banks = client.atomic_bank.list # => BasisTheory::Collection
+
+atomic_bank = atomic_banks.first # => BasisTheory::AtomicBank
+
+atomic_bank.type # => 'bank'
+atomic_bank.bank.routing_number # => '021000021'
+```
+
 #### Create an Atomic Bank
 
 ```ruby
@@ -44,12 +55,10 @@ atomic_bank.type # => 'bank'
 atomic_bank.bank.routing_number # => '021000021'
 ```
 
-#### List Atomic Banks
+#### Find Atomic Bank
 
 ```ruby
-atomic_banks = client.atomic_bank.list # => BasisTheory::Collection
-
-atomic_bank = atomic_banks.first # => BasisTheory::AtomicBank
+atomic_bank = client.atomic_bank.find('your_atomic_bank_id') # => BasisTheory::Collection
 
 atomic_bank.type # => 'bank'
 atomic_bank.bank.routing_number # => '021000021'

@@ -10,5 +10,9 @@ module BasisTheory
     def create(**attributes)
       AtomicBank.new(post_request('atomic/banks', body: attributes).body)
     end
+
+    def find(id)
+      AtomicBank.new(get_request("atomic/banks/#{id}").body)
+    end
   end
 end
