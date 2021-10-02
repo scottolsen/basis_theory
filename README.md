@@ -62,6 +62,22 @@ atomic_bank = client.atomic_bank.find('your_atomic_bank_id') # => BasisTheory::C
 
 atomic_bank.type # => 'bank'
 atomic_bank.bank.routing_number # => '021000021'
+atomic_bank.bank.account_number # => 'XXXXX67890'
+```
+
+#### Decrypt Atomic Bank
+
+```ruby
+atomic_bank = client.atomic_bank.decrypt('your_atomic_bank_id') # => BasisTheory::Collection
+
+atomic_bank.type # => 'bank'
+atomic_bank.bank.account_number # => '1234567890'
+```
+
+#### Delete Atomic Bank
+
+```ruby
+client.atomic_bank.delete('your_atomic_bank_id') # => BasisTheory::Collection
 ```
     
 ## Development
