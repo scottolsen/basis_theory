@@ -8,7 +8,7 @@ RSpec.describe BasisTheory::AtomicBankResource do
   describe '#list' do
     it 'returns a collection of AtomicBanks' do
       VCR.use_cassette('atomic_bank_list') do
-        banks = @client.atomic_bank.list
+        banks = @client.atomic_banks.list
 
         expect(banks.class).to eq(BasisTheory::Collection)
         expect(banks.data.first.class).to eq(BasisTheory::AtomicBank)
@@ -31,7 +31,7 @@ RSpec.describe BasisTheory::AtomicBankResource do
       VCR.use_cassette('atomic_bank_find') do
         created_bank = create_bank
 
-        found_bank = @client.atomic_bank.find(created_bank.id)
+        found_bank = @client.atomic_banks.find(created_bank.id)
 
         expect(found_bank).to eq(created_bank)
       end
@@ -41,7 +41,7 @@ RSpec.describe BasisTheory::AtomicBankResource do
       VCR.use_cassette('atomic_bank_find') do
         created_bank = create_bank
 
-        found_bank = @client.atomic_bank.find(created_bank.id)
+        found_bank = @client.atomic_banks.find(created_bank.id)
 
         expect(found_bank.bank.account_number).to start_with('XXXXXX')
       end
@@ -53,7 +53,7 @@ RSpec.describe BasisTheory::AtomicBankResource do
       VCR.use_cassette('atomic_bank_decrypt') do
         created_bank = create_bank
 
-        bank = @client.atomic_bank.decrypt(created_bank.id)
+        bank = @client.atomic_banks.decrypt(created_bank.id)
 
         expect(bank.class).to eq(BasisTheory::AtomicBank)
       end
@@ -63,7 +63,7 @@ RSpec.describe BasisTheory::AtomicBankResource do
       VCR.use_cassette('atomic_bank_decrypt') do
         created_bank = create_bank
 
-        found_bank = @client.atomic_bank.decrypt(created_bank.id)
+        found_bank = @client.atomic_banks.decrypt(created_bank.id)
 
         expect(found_bank.bank.account_number).to eq('1234567890')
       end
@@ -75,7 +75,7 @@ RSpec.describe BasisTheory::AtomicBankResource do
       VCR.use_cassette('atomic_bank_delete') do
         created_bank = create_bank
 
-        response = @client.atomic_bank.delete(created_bank.id)
+        response = @client.atomic_banks.delete(created_bank.id)
 
         expect(response.status).to eq(204)
       end
@@ -84,6 +84,6 @@ RSpec.describe BasisTheory::AtomicBankResource do
 
   def create_bank
     attributes = { routing_number: '021000021', account_number: '1234567890' }
-    @client.atomic_bank.create(bank: attributes)
+    @client.atomic_banks.create(bank: attributes)
   end
 end

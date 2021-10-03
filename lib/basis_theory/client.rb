@@ -13,11 +13,11 @@ module BasisTheory
       @adapter = adapter
     end
 
-    def application
+    def applications
       ApplicationResource.new(self)
     end
 
-    def atomic_bank
+    def atomic_banks
       AtomicBankResource.new(self)
     end
 

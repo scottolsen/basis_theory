@@ -8,7 +8,7 @@ RSpec.describe BasisTheory::AtomicBankResource do
   describe '#list' do
     it 'returns a collection of Application' do
       VCR.use_cassette('application_list') do
-        app = @client.application.list
+        app = @client.applications.list
 
         expect(app.class).to eq(BasisTheory::Collection)
         expect(app.data.first.class).to eq(BasisTheory::Application)
@@ -19,7 +19,7 @@ RSpec.describe BasisTheory::AtomicBankResource do
   describe '#create' do
     it 'returns an Application object' do
       VCR.use_cassette('application_create') do
-        app = @client.application.create(name: 'RSpec Test', type: 'server_to_server')
+        app = @client.applications.create(name: 'RSpec Test', type: 'server_to_server')
 
         expect(app.class).to eq(BasisTheory::Application)
         expect(app.name).to eq('RSpec Test')

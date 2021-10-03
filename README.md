@@ -33,7 +33,7 @@ client = BasisTheory::Client.new(api_key: 'YOUR_API_KEY')
 #### List Applications
 
 ```ruby
-applications = client.application.list # => BasisTheory::Collection
+applications = client.applications.list # => BasisTheory::Collection
 
 application = applications.data.first # => BasisTheory::AtomicBank
 
@@ -43,7 +43,7 @@ application.type # => 'server_to_server'
 #### Create an Application
 
 ```ruby
-application = client.application.create(name: 'My Example App', type: 'server_to_server')
+application = client.applications.create(name: 'My Example App', type: 'server_to_server')
 
 application.type # => 'server_to_server'
 ```
@@ -53,7 +53,7 @@ application.type # => 'server_to_server'
 #### List Atomic Banks
 
 ```ruby
-atomic_banks = client.atomic_bank.list # => BasisTheory::Collection
+atomic_banks = client.atomic_banks.list # => BasisTheory::Collection
 
 atomic_bank = atomic_banks.data.first # => BasisTheory::AtomicBank
 
@@ -64,7 +64,7 @@ atomic_bank.bank.routing_number # => '021000021'
 #### Create an Atomic Bank
 
 ```ruby
-atomic_bank = client.atomic_bank.create(
+atomic_bank = client.atomic_banks.create(
   bank: {
     routing_number: '021000021',
     account_number: '1234567890'
@@ -78,7 +78,7 @@ atomic_bank.bank.routing_number # => '021000021'
 #### Find Atomic Bank
 
 ```ruby
-atomic_bank = client.atomic_bank.find('your_atomic_bank_id') # => BasisTheory::Collection
+atomic_bank = client.atomic_banks.find('your_atomic_bank_id') # => BasisTheory::Collection
 
 atomic_bank.type # => 'bank'
 atomic_bank.bank.routing_number # => '021000021'
@@ -88,7 +88,7 @@ atomic_bank.bank.account_number # => 'XXXXX67890'
 #### Decrypt Atomic Bank
 
 ```ruby
-atomic_bank = client.atomic_bank.decrypt('your_atomic_bank_id') # => BasisTheory::Collection
+atomic_bank = client.atomic_banks.decrypt('your_atomic_bank_id') # => BasisTheory::Collection
 
 atomic_bank.type # => 'bank'
 atomic_bank.bank.account_number # => '1234567890'
@@ -97,7 +97,7 @@ atomic_bank.bank.account_number # => '1234567890'
 #### Delete Atomic Bank
 
 ```ruby
-client.atomic_bank.delete('your_atomic_bank_id') # => BasisTheory::Collection
+client.atomic_banks.delete('your_atomic_bank_id') # => BasisTheory::Collection
 ```
     
 ## Development
