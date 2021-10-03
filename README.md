@@ -28,6 +28,26 @@ Grab an API Key from an Application you created.
 client = BasisTheory::Client.new(api_key: 'YOUR_API_KEY')
 ```
 
+### Applications
+
+#### List Applications
+
+```ruby
+applications = client.application.list # => BasisTheory::Collection
+
+application = applications.data.first # => BasisTheory::AtomicBank
+
+application.type # => 'server_to_server'
+```
+
+#### Create an Application
+
+```ruby
+application = client.application.create(name: 'My Example App', type: 'server_to_server')
+
+application.type # => 'server_to_server'
+```
+
 ### Atomic Banks
 
 #### List Atomic Banks
@@ -35,7 +55,7 @@ client = BasisTheory::Client.new(api_key: 'YOUR_API_KEY')
 ```ruby
 atomic_banks = client.atomic_bank.list # => BasisTheory::Collection
 
-atomic_bank = atomic_banks.first # => BasisTheory::AtomicBank
+atomic_bank = atomic_banks.data.first # => BasisTheory::AtomicBank
 
 atomic_bank.type # => 'bank'
 atomic_bank.bank.routing_number # => '021000021'

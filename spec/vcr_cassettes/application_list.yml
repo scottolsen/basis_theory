@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.basistheory.com/applications
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Api-Key:
+      - "<NO SOUP FOR YOU>"
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+      Request-Context:
+      - appId=cid-v1:cdb7d2c6-2cbb-43ab-a23f-e8853a5afc9b
+      Bt-Trace-Id:
+      - 760ae9fe-4135-43e7-8b2b-a9d9c3f74b7d
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'self'
+      X-Cache:
+      - CONFIG_NOCACHE
+      X-Azure-Ref:
+      - 0P5xZYQAAAACyuAwqftQ0TaVC7Rg5g3/JQ0hHRURHRTE2MTUAMmM1Nzk0NDgtNjA3MC00MjgyLWIzYWMtZGE3MGQ0NmIxYzQ3
+      Date:
+      - Sun, 03 Oct 2021 12:04:14 GMT
+    body:
+      encoding: UTF-8
+      string: '{"pagination":{"total_items":2,"page_number":1,"page_size":20,"total_pages":1},"data":[{"id":"31904698-8520-4437-b50a-1ba982b772d9","tenant_id":"<NO
+        SOUP FOR YOU>","name":"basis-theory ruby gem","type":"management","created_at":"2021-10-02T11:26:19.9832699+00:00","permissions":["application:update","log:read","reactor:delete","reactor:create","tenant:update","application:delete","application:create","tenant:read","application:read","reactor:update","report:read","tenant:delete","reactor:read"]},{"id":"b12c1d3f-76ee-4808-8624-e331a3948d1e","tenant_id":"<NO
+        SOUP FOR YOU>","name":"Foo","type":"server_to_server","created_at":"2021-07-22T13:18:47.3213107+00:00","modified_at":"2021-09-19T20:02:42.2807201+00:00","permissions":["bank:read","card:delete","bank:delete","bank:create","card:create","card:read","bank:decrypt","bank:update","token:decrypt","token:delete","card:update","token:read","token:create","reactor:read"]}]}'
+  recorded_at: Sun, 03 Oct 2021 12:04:15 GMT
+recorded_with: VCR 6.0.0

@@ -11,6 +11,7 @@ RSpec.describe BasisTheory::AtomicBankResource do
         banks = @client.atomic_bank.list
 
         expect(banks.class).to eq(BasisTheory::Collection)
+        expect(banks.data.first.class).to eq(BasisTheory::AtomicBank)
       end
     end
   end
