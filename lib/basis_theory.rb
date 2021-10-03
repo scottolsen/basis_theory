@@ -13,7 +13,9 @@ module BasisTheory
 
   autoload :ApplicationResource, 'basis_theory/resources/application_resource'
   autoload :AtomicBankResource, 'basis_theory/resources/atomic_bank_resource'
+  autoload :TokenResource, 'basis_theory/resources/token_resource'
 
   autoload :Application, 'basis_theory/objects/application'
   autoload :AtomicBank, 'basis_theory/objects/atomic_bank'
+  autoload :Token, 'basis_theory/objects/token'
 end

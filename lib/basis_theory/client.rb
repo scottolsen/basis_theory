@@ -21,6 +21,10 @@ module BasisTheory
       AtomicBankResource.new(self)
     end
 
+    def tokens
+      TokenResource.new(self)
+    end
+
     def connection
       @connection ||= Faraday.new(BASE_URL) do |conn|
         # conn.response :logger, ::Logger.new(STDOUT), body: true, bodies: { request: true, response: true }

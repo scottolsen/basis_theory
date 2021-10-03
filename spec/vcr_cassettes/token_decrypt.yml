@@ -1,0 +1,99 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.basistheory.com/tokens
+    body:
+      encoding: UTF-8
+      string: '{"data":"some_data_to_encrypt"}'
+    headers:
+      X-Api-Key:
+      - "<NO SOUP FOR YOU>"
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Length:
+      - '212'
+      Content-Type:
+      - application/json; charset=utf-8
+      Location:
+      - https://api.basistheory.com/tokens/ebadb499-4ac6-403c-945f-dac81271115b
+      Request-Context:
+      - appId=cid-v1:cdb7d2c6-2cbb-43ab-a23f-e8853a5afc9b
+      Bt-Trace-Id:
+      - 17afbb1c-2376-43d4-b8d8-b198aad1124f
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'self'
+      X-Cache:
+      - CONFIG_NOCACHE
+      X-Azure-Ref:
+      - 0xLVZYQAAAACEnr6ZSZGITLw3haY//lpcQ0hHRURHRTE2MTQAMmM1Nzk0NDgtNjA3MC00MjgyLWIzYWMtZGE3MGQ0NmIxYzQ3
+      Date:
+      - Sun, 03 Oct 2021 13:53:08 GMT
+    body:
+      encoding: UTF-8
+      string: '{"id":"ebadb499-4ac6-403c-945f-dac81271115b","tenant_id":"<NO SOUP
+        FOR YOU>","type":"token","created_by":"b12c1d3f-76ee-4808-8624-e331a3948d1e","created_at":"2021-10-03T13:53:08.3175556+00:00"}'
+  recorded_at: Sun, 03 Oct 2021 13:53:08 GMT
+- request:
+    method: get
+    uri: https://api.basistheory.com/tokens/ebadb499-4ac6-403c-945f-dac81271115b/decrypt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Api-Key:
+      - "<NO SOUP FOR YOU>"
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '242'
+      Content-Type:
+      - application/json; charset=utf-8
+      Request-Context:
+      - appId=cid-v1:cdb7d2c6-2cbb-43ab-a23f-e8853a5afc9b
+      Bt-Trace-Id:
+      - f8cf5deb-4442-44c6-8919-b65cb2a061fd
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'self'
+      X-Cache:
+      - CONFIG_NOCACHE
+      X-Azure-Ref:
+      - 0xLVZYQAAAADwb1XVrlWbSbUf+puDVJUYQ0hHRURHRTE2MDgAMmM1Nzk0NDgtNjA3MC00MjgyLWIzYWMtZGE3MGQ0NmIxYzQ3
+      Date:
+      - Sun, 03 Oct 2021 13:53:07 GMT
+    body:
+      encoding: UTF-8
+      string: '{"id":"ebadb499-4ac6-403c-945f-dac81271115b","tenant_id":"<NO SOUP
+        FOR YOU>","data":"some_data_to_encrypt","type":"token","created_by":"b12c1d3f-76ee-4808-8624-e331a3948d1e","created_at":"2021-10-03T13:53:08.3175556+00:00"}'
+  recorded_at: Sun, 03 Oct 2021 13:53:08 GMT
+recorded_with: VCR 6.0.0
